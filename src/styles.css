@@ -64,7 +64,7 @@ main{
     width:100%;
 }
 
-.movie-info{
+/* .movie-info{
     
     color:#eee;
     display: flex;
@@ -76,22 +76,42 @@ main{
 
 .movie-info h3{
     margin-top: 0;
-    margin-bottom: 0;
-    text-align: left;
 }
 
 .movie-info span{
     background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    
     padding: 0.25rem 0.5rem;
     border-radius: 3px;
     font-weight: bold;
+} */
+
+.movie-info{
+    color:#eee;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
+    letter-spacing: 0.5px;
+    height: 90px; /* задання фіксованої висоти */
+}
+
+.movie-info h3{
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-grow: 1; 
+    text-align: center; 
+}
+
+.movie-info span{
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 1rem; 
 }
 
 .movie-info span.green{
-    color:rgb(30, 230, 30);
+    color:lightgreen;
 }
 
 .movie-info span.orange{
