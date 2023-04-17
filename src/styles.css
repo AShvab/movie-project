@@ -7,7 +7,7 @@
 
 :root{
     --primary-color:#72318e;
-    --secondary-color: #e79cef;
+    --secondary-color: #9f44c7;
 }
 
 body{
@@ -40,7 +40,8 @@ header{
 }
 
 .search::placeholder{
-    color: #7378c5;
+    color: #3e1b4d;
+    font-weight:500 ;
 }
 
 main{
@@ -64,33 +65,12 @@ main{
     width:100%;
 }
 
-/* .movie-info{
-    
-    color:#eee;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem 1rem;
-    letter-spacing: 0.5px;
-}
-
-.movie-info h3{
-    margin-top: 0;
-}
-
-.movie-info span{
-    background-color: var(--primary-color);
-    padding: 0.25rem 0.5rem;
-    border-radius: 3px;
-    font-weight: bold;
-} */
-
 .movie-info{
     color:#eee;
     display: flex;
     align-items: center;
     justify-content: center; 
-    padding: 10px;
+    padding: 10px 15px;
     letter-spacing: 0.5px;
     height: 90px; /* задання фіксованої висоти */
 }
@@ -99,7 +79,7 @@ main{
     margin-top: 0;
     margin-bottom: 0;
     flex-grow: 1; 
-    text-align: center; 
+    text-align: left; 
 }
 
 .movie-info span{
@@ -111,11 +91,11 @@ main{
 }
 
 .movie-info span.green{
-    color:lightgreen;
+    color:rgb(19, 221, 19);
 }
 
 .movie-info span.orange{
-    color:orange;
+    color:rgb(235, 227, 2);
 }
 
 .movie-info span.red{
@@ -157,12 +137,30 @@ main{
     cursor: pointer;
 }
 
+.tag:hover{
+    background-color: rgb(240, 85, 12);
+    box-shadow: 0px 0px 22px 0px rgba(250,  244,  244, 0.61);
+}
+
 .tag.highlight{
-    background-color: red;
+    background-color: rgb(240, 85, 12);
+    
+    box-shadow: 0px 0px 22px 0px rgba(250,  244,  244, 0.61);
 }
 .no-results{
     color:white;
 }
+
+.clear-btn {
+    background-color: rgb(25, 0, 255);
+   
+    box-shadow: 0px 0px 22px 0px rgba(250,  244,  244, 0.61);
+}
+
+.clear-btn:hover{
+    background-color:#231187 ;
+}
+/* ----------------------------------------------------------- */
 
 .pagination{
     display:flex;
@@ -301,3 +299,4 @@ main{
 .dots .dot.active{
     border-color: orange;
 }
+
