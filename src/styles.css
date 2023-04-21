@@ -54,7 +54,7 @@ main{
     width: 300px;
     margin: 1rem;
     border-radius: 3px;
-    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.1);
+    box-shadow: 0.2px 4px 5px rgba(0,0,0,0.2);
     background-color: var(--secondary-color);
     position:relative;
     overflow: hidden;
@@ -115,7 +115,10 @@ main{
 }
 
 .movie:hover .overview{
-    transform:translateY(0)
+    transform:translateY(0);
+    background-color: #cea9df;
+    height: 100%;
+    cursor: pointer;
 }
 
 #tags{
@@ -175,17 +178,34 @@ main{
     cursor:pointer;
 }
 
+.page:hover,
+.page:focus {
+color: orange;
+scale: 1.2;
+}
+
 .page.disabled{
     cursor:not-allowed;
     color:grey;
 }
 
 .current{
-    padding: 10px 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     border: 5px solid orange;
     font-size: 20px;
     font-weight: 600;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.current:hover {
+background-color: orange;
 }
 
 .know-more{
