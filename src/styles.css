@@ -32,6 +32,7 @@ header{
     font-size: 1rem;
     color:#fff;
     font-family: inherit;
+    
 }
 
 .search:focus{
@@ -73,7 +74,7 @@ main{
     justify-content: center; 
     padding: 10px 15px;
     letter-spacing: 0.5px;
-    height: 90px; /* задання фіксованої висоти */
+    height: 100px; /* задання фіксованої висоти */
 }
 
 .movie-info h3{
