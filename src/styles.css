@@ -22,7 +22,9 @@ header{
     display:flex;
     justify-content: flex-end;
     background-color: var(--secondary-color);
+    margin: 0;
 }
+
 
 .search{
     background-color: transparent;
@@ -222,7 +224,6 @@ background-color: orange;
 }
 /* The Overlay (background) */
 .overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
@@ -254,12 +255,12 @@ background-color: orange;
     transition: 0.3s; /* Transition effects on hover (color) */
   }
   
-  /* When you mouse over the navigation links, change their color */
+  
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
   }
   
-  /* Position the close button (top right corner) */
+ 
   .overlay .closebtn {
     position: absolute;
     top: 20px;
@@ -267,7 +268,7 @@ background-color: orange;
     font-size: 60px;
   }
   
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+ 
   @media screen and (max-height: 450px) {
     .overlay a {font-size: 20px}
     .overlay .closebtn {
@@ -322,3 +323,51 @@ background-color: orange;
     border-color: orange;
 }
 
+/* ========================================upward===================== */
+.upward{
+    position: fixed;
+    bottom: 700px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: orange;
+    border: 3px solid orangered;
+   
+    cursor: pointer;
+    border-radius: 50%;    
+    font-size: 20px; 
+    line-height: 70px;
+    
+    font-weight: 800;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.active{
+    bottom: 40px;
+    visibility: visible;
+    opacity: 1;
+    z-index: 999;
+}
+
+.upward:hover{
+    background-color: orange;   
+    scale: 1.2; 
+    /* border: 3px solid #000000;     */
+}
+
+.arrow{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: orangered;
+}
+
+.dark-mode .upward{
+    border: 3px solid #ffffff;
+}
+.dark-mode .arrow{
+    fill:#ffffff
+}
