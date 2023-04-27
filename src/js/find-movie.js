@@ -123,10 +123,11 @@ function showMovies(data){
         const movieEl = document.createElement('div');
         movieEl.classList.add('movie');
         movieEl.innerHTML = `
-        <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" width="300" height="450">
+        <img class="movie-poster" src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580" }" alt="${title}" width="300" height="450">
         <div class="movie-info">
         <h3>${title}</h3>
-        <span class="${getColor(vote_average)}">${vote_average.toFixed(1)}</span>        
+        <span class="${getColor(vote_average)}">${vote_average.toFixed(1)}</span>
+        <img class="movie-trailer" width="50" height="40" src="https://www.freepnglogos.com/uploads/youtube-play-red-logo-png-transparent-background-6.png" alt="youtube-trailer">
         </div>
 
         <div class="overview">
