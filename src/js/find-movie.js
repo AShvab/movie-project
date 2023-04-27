@@ -24,9 +24,9 @@ let totalPages = 1000;
 
 
 let selectedGenre = [];
-setGenre();
 
-function setGenre(){
+setGenre();
+ function setGenre(){      
     tagsEl.innerHTML = '';
     genres.forEach(({id, name}) =>{
         const t = document.createElement('div');

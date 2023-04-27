@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movie project</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    
-  <header>
-    <section class="header-nav">
-      <!-- <h1 class="title">Movie App</h1> -->
-      <form  id="form">
-        <input type="text" placeholder="Search" id="search" class="search">
-    </form>
-    </section> 
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie project</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header__nav">
+      <div class="header__container ">
+        <div class="header__content">
+          <a href="#" class="header__logo">My Movies</a>       
+        <form id="form">
+          <input type="text" placeholder="Search" id="search" class="search" />
+        </form>
+        </div>        
+      </div>      
+    </header>
 
-  <div id="tags"></div>
-  
-  <main id="main">    
-  </main>
+    <div class="tags__container" id="tags"></div>
+    <main id="main">  
+    </main>
 
-  <div class="pagination">
+    <div class="pagination">
       <div class="page" id="prev">Previous Page</div>
       <div class="current page-active" id="current">1</div>
-      <!-- <div class="current">2</div>
-      <div class="current">3</div>
-      <div class="current">4</div>
-      <div class="current">5</div> -->
       <div class="page" id="next">Next Page</div>
       <div class="page" id="last" hidden>1000</div>
-  </div>
-  <div class="upward">
-    <svg class="arrow" width="35" height="35">
-    <use href="./images/icons.svg#icon-arrow-up2"></use>
-</svg>
-</div>
-    
-  <script src="./js/upward.js" type="module"></script>
-  <script src="./js/find-movie.js" type="module"></script>
+    </div>
+    <div class="upward">
+      <svg class="arrow" width="35" height="35">
+        <use href="./images/icons.svg#icon-arrow-up2"></use>
+      </svg>
+    </div>
 
-</body>
+    <script src="./js/upward.js" type="module"></script>
+    <script src="./js/find-movie.js" type="module"></script>
 
+  </body>
 </html>

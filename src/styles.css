@@ -3,6 +3,7 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
 }
 
 :root{
@@ -17,19 +18,40 @@ body{
 }
 
 
-header{
-    padding:1rem;
-    display:flex;
-    justify-content: flex-end;
-    background-color: var(--secondary-color);
-    margin: 0;
+/* =================================header========================================= */
+.header__container{    
+    max-width: 1300px;
+    margin: 0 auto;
+    
 }
 
+.header__nav {
+    background-color: var(--secondary-color);
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
 
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 80px;
+}
+
+.header__logo{
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;   
+}
 .search{
     background-color: transparent;
     border: 2px solid var(--primary-color);
-    padding:0.5rem 1rem;
+    padding:10px 20px;
     border-radius: 50px;
     font-size: 1rem;
     color:#fff;
@@ -48,6 +70,13 @@ header{
     
 }
 
+
+.tags__container{
+    max-width: 1300px;
+    padding-top: 100px;
+}
+
+/* ========================================movie================================= */
 main{
     display:flex;
     flex-wrap: wrap;
@@ -62,6 +91,7 @@ main{
     background-color: var(--secondary-color);
     position:relative;
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 
@@ -87,11 +117,20 @@ main{
 }
 
 .movie-info span{
-    background-color: var(--primary-color);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #43025f;
+    border: 1px solid #ffffff;
     padding: 0.25rem 0.5rem;
-    border-radius: 3px;
+    border-radius: 50%;
     font-weight: bold;
     margin-left: 1rem; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .movie-info span.green{
@@ -118,13 +157,21 @@ main{
     transition:transform 0.3s ease-in;
 }
 
-.movie:hover .overview{
+/* .movie:hover .overview{
     transform:translateY(0);
     background-color: #cea9df;
     height: 100%;
     cursor: pointer;
+} */
+
+.movie:hover{    
+    cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: -3px 1px 37px -1px rgba(252,238,246,0.75);
+
 }
 
+/* ==============================genresBtns========================================== */
 #tags{
     width:80%;
     display:flex;
@@ -132,6 +179,7 @@ main{
     justify-content: center;
     align-items: center;
     margin: 10px auto;
+   
 }
 
 .tag{
@@ -150,8 +198,7 @@ main{
 }
 
 .tag.highlight{
-    background-color: rgb(240, 85, 12);
-    
+    background-color: rgb(240, 85, 12);    
     box-shadow: 0px 0px 22px 0px rgba(250,  244,  244, 0.61);
 }
 .no-results{
@@ -159,15 +206,14 @@ main{
 }
 
 .clear-btn {
-    background-color: rgb(25, 0, 255);
-   
+    background-color: rgb(25, 0, 255);   
     box-shadow: 0px 0px 22px 0px rgba(250,  244,  244, 0.61);
 }
 
 .clear-btn:hover{
     background-color:#231187 ;
 }
-/* ----------------------------------------------------------- */
+/* ======================================pagination======================== */
 
 .pagination{
     display:flex;
@@ -193,8 +239,7 @@ scale: 1.2;
     color:grey;
 }
 
-.current{
-    
+.current{    
     display: flex;
     justify-content: center;
     align-items: center;
